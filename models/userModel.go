@@ -1,6 +1,10 @@
 package models
 
-import "gorm.io/gorm"
+import (
+	"time"
+
+	"gorm.io/gorm"
+)
 
 type User struct {
 	gorm.Model
@@ -10,4 +14,11 @@ type User struct {
 	Feedback    string
 	Points      uint
 	HasReferral bool
+	Vouchers    uint
+	IsMember    bool
+	MemberType  string
+	MemberUntil time.Time
+	MemberDays  uint
+	Address     string
+	Kecamatan   string
 }
